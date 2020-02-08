@@ -1,43 +1,49 @@
 .Main {
+  height: 100vh;
   background-color: rgb(131, 131, 131);
   color: #eee;
-  height: 100vh;
   display: flex;
-  .items {
-    height: 100%;
-    width: 30%;
+  flex-direction: column;
+  overflow: hidden;
+  .contant {
     display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    padding: 6px;
-    overflow: auto;
-    & > * {
-      width: 100%;
-    }
-    .input-add-items{
-      font-size: 1.2rem;
-      padding: 4px;
-      margin-bottom: 8px;
-    }
-    .item {
+    height: 100%;
+    .items {
+      height: 100%;
+      width: 30%;
       display: flex;
-      align-items: center;
-      padding: 4px 4px 4px 10px;
-      margin: 0 0 4px 0;
-      background-color: #4e4e4e;
-      .item-name {
-        font-size: 1.5rem;
-        font-weight: bold;
+      flex-direction: column;
+      align-items: baseline;
+      padding: 6px;
+      overflow: auto;
+      & > * {
+        width: 100%;
       }
-      .item-check {
-        height: 2rem;
-        width: 2rem;
-        margin: 0 8px 0 0;
+      .input-add-items {
+        font-size: 1.2rem;
+        padding: 4px;
+        margin-bottom: 8px;
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        padding: 4px 4px 4px 10px;
+        margin: 0 0 4px 0;
+        background-color: #4e4e4e;
+        .item-name {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        .item-check {
+          height: 2rem;
+          width: 2rem;
+          margin: 0 8px 0 0;
+        }
       }
     }
-  }
-  .details {
-    width: 70%;
-    overflow: auto;
+    .details {
+      width: 70%;
+      overflow: auto;
+    }
   }
 }

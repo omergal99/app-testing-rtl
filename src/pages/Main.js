@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useCallback } from 'react';
 
-function Main() {
+function Main({ greet }) {
 
   const [items, setItems] = useState([{ id: 'I123', name: 'mamama', isChecked: false }]);
 
@@ -28,13 +28,16 @@ function Main() {
 
   return (
     <div className="Main">
-      <div className="items">
-        <h2 className="main-title">Item List</h2>
-        <input type="text" className="input-add-items" onKeyUp={addItem} />
-        {list}
-      </div>
-      <div className="details">
-        <h2>Details</h2>
+      <h1 data-testid="greet-text">{greet}</h1>
+      <div className="contant">
+        <div className="items">
+          <h2 className="main-title">Item List</h2>
+          <input type="text" className="input-add-items" onKeyUp={addItem} />
+          {list}
+        </div>
+        <div className="details">
+          <h2>Details</h2>
+        </div>
       </div>
     </div>
   );
