@@ -1,6 +1,6 @@
 import React from 'react';
 import './assets/css/App.scss';
-import Main from './pages/Main'
+import Main from './pages/Main';
 
 function App() {
   return (

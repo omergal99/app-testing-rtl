@@ -26,13 +26,18 @@ function Main({ greet }) {
     </div>
   })
 
+  const lala = (ev) => {
+    console.log(ev);
+  }
+
   return (
     <div className="Main">
       <h1 data-testid="greet-text">{greet}</h1>
       <div className="contant">
         <div className="items">
           <h2 className="main-title">Item List</h2>
-          <input type="text" className="input-add-items" onKeyUp={addItem} />
+          <input type="text" className="input-add-items" onKeyUp={addItem}
+            onBlur={lala} />
           {list}
         </div>
         <div className="details">
