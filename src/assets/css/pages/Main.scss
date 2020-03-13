@@ -8,7 +8,7 @@
   .contant {
     display: flex;
     height: 100%;
-    .items {
+    .wrap-items {
       height: 100%;
       width: 30%;
       display: flex;
@@ -25,11 +25,15 @@
         margin-bottom: 8px;
       }
       .item {
+        cursor: pointer;
         display: flex;
         align-items: center;
         padding: 4px 4px 4px 10px;
         margin: 0 0 4px 0;
         background-color: #4e4e4e;
+        &.selected{
+          background-color: #137184;
+        }
         .item-name {
           font-size: 1.5rem;
           font-weight: bold;
