@@ -31,7 +31,7 @@
         padding: 4px 4px 4px 10px;
         margin: 0 0 4px 0;
         background-color: #4e4e4e;
-        &.selected{
+        &.selected {
           background-color: #137184;
         }
         .item-name {
@@ -39,8 +39,8 @@
           font-weight: bold;
         }
         .item-check {
-          height: 2rem;
-          width: 2rem;
+          height: 1.5rem;
+          width: 1.5rem;
           margin: 0 8px 0 0;
         }
       }
@@ -48,6 +48,10 @@
     .details {
       width: 70%;
       overflow: auto;
+      .data-preview {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

@@ -25,6 +25,10 @@ function Main({ greet }) {
     const itemIdx = items.findIndex(item => item.id === id);
     selectedIdx !== itemIdx && setSelectedIdx(itemIdx);
   }
+  const updateItem = newItem => {
+    const updateItems = items.map(item => item.id === newItem.id ? newItem : item);
+    setItems(updateItems);
+  }
 
   const selectedItem = selectedIdx !== null ? items[selectedIdx] : null;
   return (
@@ -39,7 +43,7 @@ function Main({ greet }) {
         </div>
         <div className="details">
           <h2>Details</h2>
-          <ItemPreview item={selectedItem} />
+          <ItemPreview item={selectedItem} onUpdateItem={updateItem} />
         </div>
       </div>
     </div>
